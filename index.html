@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Fernando Montes De Oca</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+
+     <!-- GOOGLE FONTS --> 
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Rubik" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Source+Sans+Pro|Thasadith:700" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="https://fernandoxmontes.com/img/emojis/technologist.png" hreflang="en-us">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="css/main.css" hreflang="en-us"> 
+
+<script>
+    function startTime() {
+       
+        var today = new Date();
+        var day =  today.getDate();
+        var mo = today.getMonth();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        var t = setTimeout(function(){startTime()},1000);
+
+        if (h > 12) {  
+        document.getElementById('txt').innerHTML = (mo +  1) + "." + day + ".19" + "  " + (h-12) + ":" + m + " PM";
+
+        }
+        else if (h == 0) {
+            document.getElementById('txt').innerHTML = (mo +  1) + "." + day + ".19" + "  " + (h+12) + ":" + m + " AM";
+    
+        }
+        else 
+        {
+            document.getElementById('txt').innerHTML = (mo +  1) + "." + day + ".19" + "  " + (h) + ":" + m + " PM";
+        }
+    }
+    function checkTime(i) {
+        
+            if(i<10){
+                i = "0"+ i;
+            }
+            return i;
+    }
+</script>
+</head>
+<body onload = "startTime()">
+
+ <div id="site">
+      <!-- <nav class="navbar navbar-expand-lg ">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger"  href="#background">Link</a>
+                </li>
+            </ul>
+        </div>
+    </nav>-->
+
+        <div class="switch-wrapper">
+            <div class="sun"></div>
+            <div class="toggle-wrapper">
+                <input id="switch" type="checkbox" />
+                <label for="switch" id="toggle">Toggle</label>
+            </div>
+            <div class="moon"></div>
+        </div>
+        <header class="intro">
+             <div id="txt" style="padding-bottom: 20px; text-align: center; font-size: 3em" > :
+             </div>
+            <h1 class="intro__hello">Hello! 
+            <span class="emoji wave-hand animated"></span> 
+            </h1>
+            <h2 class="intro__tagline">
+                    I'm <span class="name">Fernando Montes De Oca,</span> a Senior at CSUB pursuing a Bachelor's Degree in Computer Science <span class="emoji technologist"></span>
+            </h2>
+            <h3 class="intro__contact"> 
+                <span>Contact me</span> 
+                <span class="emoji pointer"></span> 
+                <span class="emoji envelope"></span>
+                <span> 
+                    <a href="mailto:fernandoxmontes@gmail.com" target="_blank" class="highlight-link">fernandoxmontes@gmail.com</a> 
+                </span> 
+            </h3> 
+        </header>
+        <section class="section background" id = "background">
+            <div class="section__title">About Me</div>
+            <div class="section__content">
+                    <p>
+                        I'm a fourth year student pursuing a B.S. in Computer Science at <a class="underline-link" href="http://www.csub.edu/" target="_blank">California State University Bakersfield</a>,
+                        expecting to graduate in May 2019. 
+                    </p>
+                    <p>
+                        I aspire to be a software engineer after graduating. I have some work in Mobile Development (both iOS and Android) and Web Development. 
+                    </p>
+                    <a class="status" href="resume.pdf" target="_blank">
+                        <!--<img src = "img/emojis/eyes.png" class = "eyes">  -->
+                        <div class="status__message"> Check out my resume! <span class="paper"></span> </div>
+                    </a>
+                </div>
+        </section>
+        <section class="section skills">
+            <div class="section__title">Skills</div>
+            <div class="section__content">
+                <div class="skillz">
+
+                    <div class="skillz__category">
+                        <div class="skillz__category__label">Languages</div>
+                        <ul>
+                            <li class="skillz__category__item">Java</li>
+                            <li class="skillz__category__item">C++</li>
+                            <li class="skillz__category__item">Swift</li>
+                            <li class="skillz__category__item">JavaScript</li>
+                            <li class="skillz__category__item">HTML</li>
+                            <li class="skillz__category__item">CSS</li>
+                            <li class="skillz__category__item">SQL</li>
+                            <li class="skillz__category__item">PHP</li>
+                            </ul>
+                    </div>
+                    <div class="skillz__category">
+                        <div class="skillz__category__label">Frameworks</div>
+                        <ul>
+                            <li class="skillz__category__item">React</li>
+                            <li class="skillz__category__item">Node</li>
+                            <li class="skillz__category__item">Redux</li>
+                            <li class="skillz__category__item">Express</li>
+                        </ul>
+                    </div>
+                    <div class="skillz__category">
+                        <div class="skillz__category__label">Tools & Technologies</div>
+                        <ul>
+                            <li class="skillz__category__item">Unix/Linux</li>
+                            <li class="skillz__category__item">Git & Github</li>
+                            <li class="skillz__category__item">REST</li>
+                            <li class="skillz__category__item">Heroku</li>
+                            <li class="skillz__category__item">Postman</li>
+                            <li class="skillz__category__item">MongoDB</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+       <section class="section other-projects">
+                <div class="section__title">Projects</div>
+                <div class="section__content">
+                    <div class="project">
+                        <div class="project__name">
+                            <a href="https://github.com/fernandomontesdeoca" target="_blank" class="arrow-link">Lit List</a>
+                        </div>
+                        <p>Developed an iOS app in Swift that allows users to log into their Apple Music and collaborate on playlists in real time with friends. I use the Apple Music API and I store the playlists in a Firebase backend. I am currently polishing the app to put it up in the App Store. The main feature of this app is something that cannot be done in Apple's own Music app.
+                        </p>
+                        <img class = "projectpic" src="img/portfolio/litlist.jpeg" style="width: 200px; height: 400px;">
+                        <img class = "projectpic" src="img/portfolio/searching.jpeg" style="width: 200px; height: 400px;">
+
+                        <div class="project__used">
+                            <span class="project__used__item">SWIFT</span>
+                            <span class="project__used__item">iOS</span>
+                            <span class="project__used__item">FIREBASE</span>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <div class="project__name">
+                            <a href="https://github.com/fernandomontesdeoca" target="_blank" class="arrow-link">DiversiChat</a>
+                        </div>
+                        <p>A realtime messaging web app developed in React, Nodejs, & Express. Uses Socket.IO for realtime event based communication and stores messages in a MongoDB database. RESTful Backend.
+                        </p>
+                       <img class = "projectpic" src="img/portfolio/diversichat.png" style="width: 500px; height: 250px;">
+
+                        <div class="project__used">
+                            <span class="project__used__item">REACTJS</span>
+                            <span class="project__used__item">MONGODB</span>
+                            <span class="project__used__item">NODEJS</span>
+                            <span class="project__used__item">EXPRESS</span>
+                            <span class="project__used__item">SOCKETIO</span>
+                            <span class="project__used__item">REST</span>
+                        </div>
+                    </div>
+                     <div class="project">
+                        <div class="project__name">
+                            <a href="https://github.com/fernandomontesdeoca" target="_blank" class="arrow-link">Strike</a>
+                        </div>
+                        <p>An iOS app developed in Swift that allows users to compete with friends in predicting the result on sports games in real life. I also implemented a RESTful backend for the application that communicates Sports API to get the real data. Everything is stored in a DynamoDB database. </p>
+                       <img class = "projectpic" src="img/portfolio/strike.jpeg" style="width: 200px; height: 400px;">
+
+                        <div class="project__used">
+                            <span class="project__used__item">iOS</span>
+                            <span class="project__used__item">SWIFT</span>
+                            <span class="project__used__item">REST</span>
+                            <span class="project__used__item">DYNAMODB</span>
+                            <span class="project__used__item">REST</span>
+                        </div>
+                    </div>
+                    <!--
+                    <div class="project">
+                        <div class="project__name">
+                            <a href="#" target="_blank" class="arrow-link">Guess The Soccer Player</a>
+                        </div>
+                        <p>An iOS trivia game that displays a name of a Premier League soccer player and the user has to guess which player it is based on one of the three pictures presented. </p>
+                        <img class = "projectpic" src="img/portfolio/soccerPlayers.png" style="width: 200px; height: 350px;">
+                        <div class="project__used">
+                            <span class="project__used__item">SWIFT</span>
+                            <span class="project__used__item">iOS</span>
+                        </div>
+                    </div>-->
+                    <!--
+                     <div class="project">
+                        <div class="project__name">
+                            <a href="#" target="_blank" class="arrow-link">Space Defender</a>
+                        </div>
+                        <p>A 2D Android game where the user controls a space ship. The goal is to shoot as many ships as you can and not let them get past you. Points are deducted from your total score whenever they get past you, and points are added when you shoot them down.
+                        </p>
+                        <img class = "projectpic" src="img/portfolio/homeScreen.png" style="width: 200px; height: 350px;">
+                        <img class = "projectpic" src="img/portfolio/inAction.png" style="width: 200px; height: 350px;">
+
+
+                        <div class="project__used">
+                            <span class="project__used__item">JAVA</span>
+                            <span class="project__used__item">ANDROID</span>
+                        </div>
+                    </div>-->
+
+                     <!-- <div class="project">
+                        <div class="project__name">
+                            <a href="#" target="_blank" class="arrow-link">Picture Puzzle</a>
+                        </div>
+                        <p>An android application that lets you take a picture and it splits it into a random 3x3 grid where you have to solve the puzzle back to the original picture. It also times you to see how fast you actually completed the puzzle.
+                        </p>
+                        <div class="project__used">
+                            <span class="project__used__item">JAVA</span>
+                            <span class="project__used__item">ANDROID</span>
+
+                        </div>
+                    </div>-->
+                    
+                    <!--
+                    <div class="project">
+                        <div class="project__name">
+                            <a href="#" target="_blank" class="arrow-link">Calculator</a>
+                        </div>
+                        <p>iOS app that has basic functions that you can use to compute problems.
+                        </p>
+                       <img class = "projectpic" src="img/portfolio/calculator.png" style="width: 200px; height: 350px;">
+
+                        <div class="project__used">
+                            <span class="project__used__item">SWIFT</span>
+                            <span class="project__used__item">iOS</span>
+                        </div>
+                    </div>
+              
+        -->
+                
+                </div>
+        </section>
+            <footer class="footer">
+                <div class="footer__links">
+                    <a href="mailto:fernandoxmontes@gmail.com" target="_blank" title="email">
+                        <span class="text">email</span>
+                        <img src="/img/social/email.svg" alt="email">
+                    </a>
+                    <a href="https://twitter.com/fernandoxmontes" target="_blank" title="twitter">
+                        <span class="text">twitter</span>
+                        <img src="/img/social/twitter.svg" alt="twitter">
+                    </a>
+                    <a href="https://instagram.com/fernandoxmontes" target="_blank" title="instagram">
+                        <span class="text">instagram</span>
+                        <img src="/img/social/instagram.svg" alt="instagram">
+                    </a>
+                    <a href="https://github.com/fernandomontesdeoca" target="_blank" title="github">
+                        <span class="text">github</span>
+                        <img src="/img/social/github.svg" alt="github">
+                    </a>
+                    <a href="https://www.linkedin.com/in/fernandoxmontes" target="_blank" title="linkedin">
+                        <span class="text">linkedin</span>
+                        <img src="/img/social/linkedin.svg" alt="linkedin">
+                    </a>
+                </div>
+            </footer>
+
+                <button id="top-button"> <img src="/img/emojis/pointing-up.png" alt=""> </button>
+            </div>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js' type="text/javascript" charset="utf-8">
+        </script>
+        <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js">
+        </script>
+        <script src="js/main.js" type="text/javascript" charset="utf-8">
+        </script>
+        <!-- Optional JavaScript -->
+    <!-- jQuery first, -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+    </body>
+</html>
